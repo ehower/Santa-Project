@@ -1,3 +1,4 @@
 CHANGES
 
 DATE	NAME	WHAT CHANGED
+12/19 Kyle  Getting gifts file into respective array
