@@ -15,10 +15,10 @@ public class fileInputHelpSanta{
 		ArrayList<Integer> ages = new ArrayList<>();
 
 		ArrayList<String> gifts = new ArrayList<>();
-		ArrayList<String> prices = new ArrayList<>();
-		ArrayList<String> daysToMake = new ArrayList<>();
-		ArrayList<String> minAge = new ArrayList<>();
-		ArrayList<String> maxAge = new ArrayList<>();
+		ArrayList<Double> prices = new ArrayList<>();
+		ArrayList<Integer> daysToMake = new ArrayList<>();
+		ArrayList<Integer> minAge = new ArrayList<>();
+		ArrayList<Integer> maxAge = new ArrayList<>();
 
 		//variables
 		String name = "";
@@ -78,33 +78,29 @@ public class fileInputHelpSanta{
 		//variables
 		String lines = "";
 
-		int counter = 0;
 		while(scanG.hasNext()){
-			lineNum = scanG.nextLine();
 
-			if(counter == 0){
-			lineNum(gifts).add(scanG.nextLine());
+		for(int i = 0; i <=4; i++)
+		{
+			if(i == 0)
+			{
+			gifts.add(scanG.nextLine());
 			}
-			if(counter == 1){
-			lineNum(minAge).add(scanG.nextLine());
+			if(i == 1){
+			minAge.add(scanG.nextInt());
 			}
-			if(counter == 2){
-			lineNum(maxAge).add(scanG.nextLine());
+			if(i == 2){
+			maxAge.add(scanG.nextInt());
 			}
-			if(counter == 3){
-			lineNum(prices).add(scanG.nextDouble());
+			if(i == 3){
+			prices.add(scanG.nextDouble());
 			}
-			if(counter == 4){
-			lineNum(daysToMake).add(scanG.nextLine());
-			}
-			if(counter == 4){
-			counter = 0;
-			}
-			else{
-			counter++;
+			if(i == 4){
+			daysToMake.add(scanG.nextInt());
+			scanG.nextLine();
 			}
 		}
+		}
 		scanG.close();
-		System.out.println(prices);
 	}
 }
