@@ -1,11 +1,10 @@
-/*parallel arrays, arrayLists
-kids by age, gifts by price, price/age^^^
-*method named naughtyOrNice()*/
+/*Driver class for HelpSanta by Kyle and Ethan*/
 import java.util.*;
 import java.io.*;
 import java.lang.*;
 public class fileInputHelpSanta{
 	public static void main(String[] args)throws FileNotFoundException{
+		/*Start Kyle and Ethan*/
 		//Scanners
 		Scanner scanK = new Scanner(new File("kids2.txt"));
 		Scanner scanG = new Scanner(new File("gifts.txt"));
@@ -31,13 +30,8 @@ public class fileInputHelpSanta{
 		String[] lineParts = new String[3];
 		String[] lineParts2 = new String[5];
 
-
-
-		//for each loops
-
-
-
 		//while next
+		/*Start Ethan with ideas and help with Kyle*/
 		while(scanK.hasNext())
 		{
 		line = scanK.nextLine();
@@ -71,6 +65,7 @@ public class fileInputHelpSanta{
 
 		System.out.println(names);
 		scanK.close();
+		/*End Ethan start Kyle for the funsies*/
 
 		//just for funsies
 		System.out.println("\n\n\n\n\n\n");
@@ -78,6 +73,7 @@ public class fileInputHelpSanta{
 		//variables
 		String lines = "";
 
+		/*Start Ethan with help from Kyle*/
 		while(scanG.hasNext()){
 
 		for(int i = 0; i <=4; i++)
@@ -101,6 +97,16 @@ public class fileInputHelpSanta{
 			}
 		}
 		}
+		/*End Ethan, start Kyle*/
 		scanG.close();
+		System.out.println(gifts);
+		System.out.println("");
+		System.out.println(minAge);
+		System.out.println("");
+		System.out.println(maxAge);
+		System.out.println("");
+		System.out.println(prices);
+		System.out.println("");
+		System.out.println(daysToMake);
 	}
 }
